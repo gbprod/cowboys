@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="screen">
+        <title>{% block title %}Cowboys{% endblock %}</title>
+        {% stylesheets
+            '@UIBundle/Resources/public/css/ui.css'
+            filter='cssrewrite' 
+        %}
+            <link href="{{ asset_url }}" rel="stylesheet" media="screen">
+        {% endstylesheets %}
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        {% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
+    </head>
+    <body>
+
+        <div class="container">
+            {% include 'BraincraftedBootstrapBundle::flash.html.twig' %}
+
+            {% block body %}{% endblock %}
+        </div>
+        
+        <script src="{{ asset('js/jquery.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.js') }}"></script>
+        
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

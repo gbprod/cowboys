@@ -75,6 +75,13 @@ test:
 ## Code coverage
 test-coverage:
 	vendor/bin/phpunit --coverage-text
+	
+## Tests loop
+test-loop:
+	while true; \
+		do vendor/bin/phpunit; \
+		read continue; \
+	done;
 
 ##########
 # Deploy #

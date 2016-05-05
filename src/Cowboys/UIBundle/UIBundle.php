@@ -1,9 +1,9 @@
 <?php
 
-namespace AppBundle;
+namespace Cowboys\UIBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class AppBundle extends Bundle
+class UIBundle extends Bundle
 {
 }

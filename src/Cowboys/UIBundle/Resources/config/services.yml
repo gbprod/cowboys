@@ -1,0 +1,5 @@
+services:
+    cowboys_ui.homepage_controller:
+        class: Cowboys\UIBundle\Controller\HomepageController
+        arguments:
+            - '@templating'
