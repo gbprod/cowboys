@@ -41,7 +41,7 @@
         "gbprod/uuid-normalizer": "^1.0",
         "symfony/assetic-bundle": "^2.8",
         "braincrafted/bootstrap-bundle": "^2.2",
-        "twbs/bootstrap": "3.0.*",
+        "twbs/bootstrap": "3.3.*",
         "jquery/jquery":  "1.11.*",
         "gbprod/elastica-provider-bundle": "^0.1",
         "gbprod/elastica-extra-bundle": "^0.2",

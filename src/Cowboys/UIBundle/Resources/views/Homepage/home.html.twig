@@ -1,3 +1,22 @@
 {% extends 'UIBundle::base.html.twig' %}
 
-{% block body %}Welcome{% endblock %}
+{% block body %}
+<div class="jumbotron">
+    <h1>Bienvenue &agrave; Glenwood spring</h1>
+    <div class="media">
+        <div class="media-left">
+            {% image '@UIBundle/Resources/public/images/sheriff.jpg' %}
+            <img src="{{ asset_url }}" class="media-object" alt="Sheriff" class="pull-left" />
+            {% endimage %}
+        </div>
+        <div class="media-body">
+            <p class="media-heading">'jour</p>
+            <p>
+                Si tu veux rentrer dans ma ville, il faut d&eacute;cliner ton identit&eacute; ou t'inscrire dans mon registre !
+            </p>
+            <a class="btn btn-default btn-lg" href="#" role="button">M'identifier</a>
+            <a class="btn btn-primary btn-lg" href="#" role="button">M'inscrire dans le registre</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

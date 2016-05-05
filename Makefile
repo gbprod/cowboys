@@ -42,7 +42,7 @@ start:
 ###########
 
 ## Install application
-install: install-deps install-database
+install: install-deps install-database install-assets
 
 install-deps:
 	composer install
@@ -51,18 +51,24 @@ install-database:
 	php bin/console doctrine:database:create --if-not-exists
 	php bin/console doctrine:schema:update --force
 
+install-assets:
+	php bin/console assetic:dump
+	php bin/console assets:install
+
 ##########
 # Update #
 ##########
 
 ## Update application
-update: update-deps update-database
+update: update-deps update-database update-assets
 
 update-deps:
 	composer update
 
 update-database:
 	php bin/console doctrine:schema:update --force
+
+update-assets: install-assets
 
 ########
 # Test #
