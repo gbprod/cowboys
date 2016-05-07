@@ -17,8 +17,8 @@ framework:
         strict_requirements: ~
     form:            ~
     csrf_protection: ~
-    validation:      { enable_annotations: true }
-    #serializer:      { enable_annotations: true }
+    validation:      ~
+    serializer:      ~
     templating:
         engines: ['twig']
     default_locale:  "%locale%"
@@ -73,3 +73,10 @@ assetic:
         
 braincrafted_bootstrap:
     css_preprocessor: none
+
+tactician:
+    commandbus:
+        default:
+            middleware:
+                - tactician.middleware.validator
+                - tactician.middleware.command_handler

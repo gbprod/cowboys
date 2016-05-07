@@ -33,7 +33,7 @@ class HomepageController extends Controller
     public function home()
     {
         return $this->templating->renderResponse(
-            'UIBundle:Homepage:home.html.twig'
+            'UIBundle:page:home.html.twig'
         );
     }
 }

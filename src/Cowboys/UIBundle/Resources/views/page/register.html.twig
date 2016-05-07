@@ -1,0 +1,24 @@
+{% extends 'UIBundle::base.html.twig' %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-lg-3">&nbsp;</div>
+    <div class="col-lg-6">
+        <h1>M'inscrire dans le registre</h1>
+        <div class="media">
+            <div class="media-left">
+                {% image '@UIBundle/Resources/public/images/sheriff.jpg' %}
+                <img src="{{ asset_url }}" class="media-object" alt="Sheriff" class="pull-left" />
+                {% endimage %}
+            </div>
+            <div class="media-body">
+                <p><strong>Sheriff: </strong>Bon, puisque t'es l&agrave; on va faire les pr&eacute;sentations : moi j'suis l'sh&eacute;riff de c'te ville, comme t'as pu le remarquer &agrave; l'&eacute;toile qui brille sur ma veste.</p>
+                <p>Et toi, t'&eacute;tais qui avant d'arriver ici ?</p>
+            </div>
+        </div>
+        {{ form(register_form) }}
+    </div>
+    <div class="col-lg-3">&nbsp;</div>
+</div>
+{% endblock %}

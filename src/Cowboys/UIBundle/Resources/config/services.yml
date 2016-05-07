@@ -3,3 +3,20 @@ services:
         class: Cowboys\UIBundle\Controller\HomepageController
         arguments:
             - '@templating'
+
+    cowboys_ui.register_controller:
+        class: Cowboys\UIBundle\Controller\RegisterController
+        arguments:
+            - '@templating'
+            - '@cowboys_ui.form.register'
+            
+    cowboys_ui.form_type.register:
+        class: Cowboys\UIBundle\Form\RegisterType
+        tags:
+            - { name: form.type }
+            
+    cowboys_ui.form.register:
+        factory: ['@form.factory', 'create']
+        class: Symfony\Component\Form\Form
+        arguments:
+            - Cowboys\UIBundle\Form\RegisterType
