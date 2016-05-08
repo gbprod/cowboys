@@ -23,11 +23,11 @@ class RegisterType extends AbstractType
         $builder
             ->add('name', Type\TextType::class, [
                 'required' => true,
-                'label'    => "Quel est ton nom étranger ?"
+                'label'    => 'Quel est ton nom étranger ?',
             ])
             ->add('email', Type\EmailType::class, [
                 'required' => true,
-                'label'    => "Il me faut aussi une adresse pour te contacter"
+                'label'    => 'Il me faut aussi une adresse pour te contacter',
             ])
             ->add('password', Type\PasswordType::class, [
                 'required' => true,

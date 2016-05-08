@@ -35,7 +35,7 @@ class RegisterController extends Controller
     /**
      * homepage
      * 
-     * @return Response
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function register()
     {
