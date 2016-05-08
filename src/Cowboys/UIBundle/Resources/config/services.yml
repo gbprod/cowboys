@@ -9,12 +9,14 @@ services:
         arguments:
             - '@templating'
             - '@cowboys_ui.form.register'
-            
+            - '@tactician.commandbus'
+            - '@router'
+
     cowboys_ui.form_type.register:
         class: Cowboys\UIBundle\Form\RegisterType
         tags:
             - { name: form.type }
-            
+
     cowboys_ui.form.register:
         factory: ['@form.factory', 'create']
         class: Symfony\Component\Form\Form

@@ -1,0 +1,5 @@
+services:
+    cowboys_infrastructure.user_provider:
+        class: Cowboys\Infrastructure\Entity\DoctrineUserProvider
+        arguments:
+            - '@doctrine.orm.entity_manager'

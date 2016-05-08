@@ -23,10 +23,11 @@ class AppExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
         $loader = new YamlFileLoader(
-            $container, 
+            $container,
             new FileLocator(__DIR__.'/../Resources/config')
         );
 
         $loader->load('services.yml');
+        $loader->load('infrastructure.yml');
     }
 }
