@@ -1,0 +1,5 @@
+services:
+    cowboys_app.register_handler:
+        class: Cowboys\AppBundle\Handler\RegisterHandler
+        tags:
+            - { name: 'tactician.handler',  command: 'Cowboys\AppBundle\Command\RegisterCommand' }
