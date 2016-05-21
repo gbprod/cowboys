@@ -3,6 +3,7 @@
 namespace Cowboys\AppBundle\Handler;
 
 use Cowboys\AppBundle\Command\RegisterCommand;
+use Cowboys\AppBundle\Entity\User;
 use Cowboys\AppBundle\Entity\UserProvider;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
@@ -42,6 +43,11 @@ class RegisterHandler
      */
     public function handle(RegisterCommand $command)
     {
+        $user = User::register(
+            $command->email,
+            $this->encoder->encodePassword($command->password)
+        );
 
+        $this->provider->save($user);
     }
 }

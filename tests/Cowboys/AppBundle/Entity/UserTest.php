@@ -13,7 +13,7 @@ class UserTest extends \PHPUnit_Framework_TestCase
 {
     public function testConstruction()
     {
-        $user = new User('username', 'password');
+        $user = User::register('username', 'password');
 
         $this->assertEquals('username', $user->getUsername());
         $this->assertEquals('password', $user->getPassword());
@@ -21,7 +21,7 @@ class UserTest extends \PHPUnit_Framework_TestCase
 
     public function testSerialize()
     {
-        $user = new User('username', 'password');
+        $user = User::register('username', 'password');
 
         $this->assertEquals(
             'a:2:{i:0;s:8:"username";i:1;s:8:"password";}',

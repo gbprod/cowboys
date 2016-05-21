@@ -22,6 +22,19 @@ class User implements UserInterface, \Serializable
     private $password;
 
     /**
+     * Register an user
+     *
+     * @param string $email
+     * @param string $password
+     *
+     * @return User
+     */
+    public static function register($email, $password)
+    {
+        return new self($email, $password);
+    }
+
+    /**
      * @param string|null $email
      * @param string|null $password
      */
