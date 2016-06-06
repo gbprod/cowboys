@@ -5,7 +5,7 @@ namespace Cowboys\Infrastructure\Cowboy;
 use Cowboys\CoreDomain\Cowboy\Cowboy;
 use Cowboys\CoreDomain\Cowboy\CowboyIdentifier;
 use Cowboys\CoreDomain\Cowboy\CowboyRepository;
-use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 
 /**
  * Repository for Cowboys
@@ -15,14 +15,14 @@ use Doctrine\ORM\EntityManager;
 class DoctrineCowboyRepository implements CowboyRepository
 {
     /**
-     * @var EntityManager $em
+     * @var EntityManagerInterface $em
      */
     private $em;
 
     /**
-     * @param EntityManager $em
+     * @param EntityManagerInterface $em
      */
-    public function __construct(EntityManager $em)
+    public function __construct(EntityManagerInterface $em)
     {
         $this->em = $em;
     }

@@ -9,7 +9,7 @@
 
 Register
 
- [ ] Persist cowboy
+ [x] Persist cowboy
  [ ] Check cowboy name duplication
  [ ] Credential VO
  [ ] Register event
