@@ -1,11 +1,11 @@
 services:
     cowboys_ui.homepage_controller:
-        class: Cowboys\UIBundle\Controller\HomepageController
+        class: Cowboys\UI\Controller\HomepageController
         arguments:
             - '@templating'
 
     cowboys_ui.register_controller:
-        class: Cowboys\UIBundle\Controller\RegisterController
+        class: Cowboys\UI\Controller\RegisterController
         arguments:
             - '@templating'
             - '@cowboys_ui.form.register'
@@ -13,7 +13,7 @@ services:
             - '@router'
 
     cowboys_ui.form_type.register:
-        class: Cowboys\UIBundle\Form\RegisterType
+        class: Cowboys\UI\Form\RegisterType
         tags:
             - { name: form.type }
 
@@ -21,4 +21,4 @@ services:
         factory: ['@form.factory', 'create']
         class: Symfony\Component\Form\Form
         arguments:
-            - Cowboys\UIBundle\Form\RegisterType
+            - Cowboys\UI\Form\RegisterType

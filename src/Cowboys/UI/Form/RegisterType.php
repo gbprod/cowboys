@@ -1,6 +1,6 @@
 <?php
 
-namespace Cowboys\UIBundle\Form;
+namespace Cowboys\UI\Form;
 
 use Cowboys\AppBundle\Command\RegisterCommand;
 use Symfony\Component\Form\AbstractType;

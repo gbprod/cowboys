@@ -1,6 +1,6 @@
 <?php
 
-namespace Cowboys\UIBundle\Controller;
+namespace Cowboys\UI\Controller;
 
 use League\Tactician\CommandBus;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Cowboys\UIBundle;
+namespace Cowboys\UI;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

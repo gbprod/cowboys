@@ -1,8 +1,7 @@
 <?php
 
-namespace Cowboys\UIBundle\DependencyInjection;
+namespace Cowboys\UI\DependencyInjection;
 
-use Cowboys\UIBundle\DependencyInjection\Configuration;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
@@ -23,7 +22,7 @@ class UIExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
         $loader = new YamlFileLoader(
-            $container, 
+            $container,
             new FileLocator(__DIR__.'/../Resources/config')
         );
 
