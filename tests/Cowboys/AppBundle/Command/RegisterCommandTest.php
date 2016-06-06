@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Cowboys\AppBundle\Command;
+namespace Tests\Cowboys\Application\Command;
 
-use Cowboys\AppBundle\Command\RegisterCommand;
+use Cowboys\Application\Command\RegisterCommand;
 
 /**
  * Tests for RegisterCommand

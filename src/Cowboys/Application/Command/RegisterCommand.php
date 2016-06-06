@@ -1,6 +1,6 @@
 <?php
 
-namespace Cowboys\AppBundle\Command;
+namespace Cowboys\Application\Command;
 
 /**
  * Command for register

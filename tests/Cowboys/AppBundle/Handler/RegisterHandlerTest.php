@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Cowboys\AppBundle\Handler;
+namespace Tests\Cowboys\Application\Handler;
 
 /**
  * Test for RegisterHandler

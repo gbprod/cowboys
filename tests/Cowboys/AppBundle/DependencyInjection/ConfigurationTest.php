@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\Cowboys\AppBundle\DependencyInjection;
+namespace Tests\Cowboys\Application\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
-use Cowboys\AppBundle\DependencyInjection\Configuration;
+use Cowboys\Application\DependencyInjection\Configuration;
 use Symfony\Component\Config\Definition\Processor;
 
 /**

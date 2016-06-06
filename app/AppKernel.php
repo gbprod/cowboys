@@ -23,7 +23,7 @@ class AppKernel extends Kernel
             new League\Tactician\Bundle\TacticianBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
-            new Cowboys\AppBundle\AppBundle(),
+            new Cowboys\Infrastructure\InfrastructureBundle(),
             new Cowboys\UI\UIBundle(),
         ];
 

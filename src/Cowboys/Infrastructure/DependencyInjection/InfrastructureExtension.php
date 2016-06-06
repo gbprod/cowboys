@@ -1,19 +1,18 @@
 <?php
 
-namespace Cowboys\AppBundle\DependencyInjection;
+namespace Cowboys\Infrastructure\DependencyInjection;
 
-use Cowboys\AppBundle\DependencyInjection\Configuration;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 /**
- * Extension for App bundle
+ * Extension for Infrastructure bundle
  *
  * @author GBProd <contact@gb-prod.fr>
  */
-class AppExtension extends Extension
+class InfrastructureExtension extends Extension
 {
     /**
      * {@inheritDoc}

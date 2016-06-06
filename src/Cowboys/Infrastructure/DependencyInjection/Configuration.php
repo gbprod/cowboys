@@ -1,12 +1,12 @@
 <?php
 
-namespace Cowboys\AppBundle\DependencyInjection;
+namespace Cowboys\Infrastructure\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 /**
- * App configuration class
+ * Infrastructure configuration class
  *
  * @author GBProd <contact@gb-prod.fr>
  */

@@ -1,10 +1,10 @@
 <?php
 
-namespace Cowboys\AppBundle\Handler;
+namespace Cowboys\Application\Handler;
 
-use Cowboys\AppBundle\Command\RegisterCommand;
-use Cowboys\AppBundle\Entity\User;
-use Cowboys\AppBundle\Entity\UserProvider;
+use Cowboys\Application\Command\RegisterCommand;
+use Cowboys\Application\Entity\User;
+use Cowboys\Application\Entity\UserProvider;
 use Cowboys\CoreDomain\Cowboy\Cowboy;
 use Cowboys\CoreDomain\Cowboy\CowboyRepository;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;

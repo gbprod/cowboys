@@ -1,0 +1,7 @@
+services:
+    cowboys_app.register_handler:
+        class: Cowboys\Application\Handler\RegisterHandler
+        arguments:
+            - '@cowboys_infrastructure.cowboys_repository'
+        tags:
+            - { name: 'tactician.handler',  command: 'Cowboys\Application\Command\RegisterCommand' }

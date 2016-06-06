@@ -10,6 +10,7 @@
 Register
 
  [x] Persist cowboy
+ [ ] Unit tests
  [ ] Check cowboy name duplication
  [ ] Credential VO
  [ ] Register event
@@ -20,3 +21,4 @@ Other
 
  [ ] Fix bundles
  [ ] Validate register command with validation
+ [ ] Validate with annotations instead of yml

@@ -1,10 +1,10 @@
 <?php
 
-namespace Tests\Cowboys\AppBundle\DependencyInjection;
+namespace Tests\Cowboys\Application\DependencyInjection;
 
-use Cowboys\AppBundle\Controller\HomepageController;
-use Cowboys\AppBundle\DependencyInjection\AppExtension;
-use Cowboys\AppBundle\Handler\RegisterHandler;
+use Cowboys\Application\Controller\HomepageController;
+use Cowboys\Application\DependencyInjection\AppExtension;
+use Cowboys\Application\Handler\RegisterHandler;
 use Cowboys\Infrastructure\Entity\DoctrineUserProvider;
 use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

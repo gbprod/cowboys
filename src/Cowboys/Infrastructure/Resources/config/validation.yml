@@ -1,4 +1,4 @@
-Cowboys\AppBundle\Command\RegisterCommand:
+Cowboys\Application\Command\RegisterCommand:
     name:
         - NotBlank: ~
     email:

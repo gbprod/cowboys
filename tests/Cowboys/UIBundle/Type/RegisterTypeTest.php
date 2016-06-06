@@ -2,7 +2,7 @@
 
 namespace Tests\Cowboys\UIBundle\Form\Type;
 
-use Cowboys\AppBundle\Command\RegisterCommand;
+use Cowboys\Application\Command\RegisterCommand;
 use Cowboys\UIBundle\Form\RegisterType;
 use Symfony\Component\Form\Test\TypeTestCase;
 
