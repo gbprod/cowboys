@@ -1,6 +1,6 @@
 <?php
 
-namespace Cowboys\AppBundle\Entity;
+namespace Cowboys\Infrastructure\Entity;
 
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -19,5 +19,5 @@ interface UserProvider extends UserProviderInterface
      *
      * @return void
      */
-    public function save(UserInterface $user);
+    public function add(UserInterface $user);
 }

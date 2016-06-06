@@ -5,6 +5,8 @@ namespace Cowboys\AppBundle\Handler;
 use Cowboys\AppBundle\Command\RegisterCommand;
 use Cowboys\AppBundle\Entity\User;
 use Cowboys\AppBundle\Entity\UserProvider;
+use Cowboys\CoreDomain\Cowboy\Cowboy;
+use Cowboys\CoreDomain\Cowboy\CowboyRepository;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 /**
@@ -15,25 +17,16 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class RegisterHandler
 {
     /**
-     * @var UserProvider
+     * @var CowboyRepository
      */
-    private $provider;
+    private $repository;
 
     /**
-     * @var UserPasswordEncoderInterface
+     * @param CowboyRepository $repository
      */
-    private $encoder;
-
-    /**
-     * @param UserProvider                 $provider
-     * @param UserPasswordEncoderInterface $encoder
-     */
-    public function __construct(
-        UserProvider $provider,
-        UserPasswordEncoderInterface $encoder
-    ) {
-        $this->provider = $provider;
-        $this->encoder  = $encoder;
+    public function __construct(CowboyRepository $repository)
+    {
+        $this->repository = $repository;
     }
 
     /**
@@ -43,11 +36,8 @@ class RegisterHandler
      */
     public function handle(RegisterCommand $command)
     {
-        $user = User::register(
-            $command->email,
-            $this->encoder->encodePassword($command->password)
-        );
+        $cowboy = Cowboy::register($command->name);
 
-        $this->provider->save($user);
+        $this->repository->add($cowboy);
     }
 }

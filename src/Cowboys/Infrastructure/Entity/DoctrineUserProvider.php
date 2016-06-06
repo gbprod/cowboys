@@ -2,7 +2,7 @@
 
 namespace Cowboys\Infrastructure\Entity;
 
-use Cowboys\AppBundle\Entity\UserProvider;
+use Cowboys\Infrastructure\Entity\UserProvider;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -48,7 +48,7 @@ class DoctrineUserProvider implements UserProvider
     /**
      * {@inheritdoc}
      */
-    public function save(UserInterface $user)
+    public function add(UserInterface $user)
     {
 
     }

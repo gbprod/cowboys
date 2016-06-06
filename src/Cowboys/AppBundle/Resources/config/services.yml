@@ -2,7 +2,6 @@ services:
     cowboys_app.register_handler:
         class: Cowboys\AppBundle\Handler\RegisterHandler
         arguments:
-            - '@cowboys_infrastructure.user_provider'
-            - '@security.password_encoder'
+            - '@cowboys_infrastructure.cowboys_repository'
         tags:
             - { name: 'tactician.handler',  command: 'Cowboys\AppBundle\Command\RegisterCommand' }

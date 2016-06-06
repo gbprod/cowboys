@@ -1,6 +1,6 @@
 <?php
 
-namespace Cowboys\AppBundle\Entity;
+namespace Cowboys\Infrastructure\Entity;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Cowboys\AppBundle\Entity;
+namespace Tests\Cowboys\Infrastructure\Entity;
 
-use Cowboys\AppBundle\Entity\User;
+use Cowboys\Infrastructure\Entity\User;
 
 /**
  * Tests for User
