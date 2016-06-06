@@ -1,0 +1,9 @@
+Cowboys\CoreDomain\Cowboy\Cowboy:
+    type: entity
+    table: cowboy
+    embedded:
+        id:
+            class: Cowboys\CoreDomain\Cowboy\CowboyIdentifier
+    fields:
+        name:
+            type: text

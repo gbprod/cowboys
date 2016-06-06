@@ -10,7 +10,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * Form to register
- * 
+ *
  * @author gbprod <contact@gb-prod.fr>
  */
 class RegisterType extends AbstractType
@@ -23,19 +23,28 @@ class RegisterType extends AbstractType
         $builder
             ->add('name', Type\TextType::class, [
                 'required' => true,
-                'label'    => "Quel est ton nom étranger ?"
+                'label'    => 'Quel est ton nom étranger ?',
+                'attr'     => [
+                    'placeholder' => 'exemple: Billy the kid',
+                ]
             ])
             ->add('email', Type\EmailType::class, [
                 'required' => true,
-                'label'    => "Il me faut aussi une adresse pour te contacter"
+                'label'    => 'Il me faut aussi une adresse pour te contacter',
+                'attr'     => [
+                    'placeholder' => 'email@exemple.com',
+                ]
             ])
             ->add('password', Type\PasswordType::class, [
                 'required' => true,
                 'label'    => 'Il me faut aussi un code secret pour te reconnaitre',
-            ]);
+            ])
+            ->add('submit', Type\SubmitType::class, [
+                'label' => 'Ajouter ça au registre',
+            ])
         ;
     }
-    
+
     /**
      * {inheritdoc}
      */

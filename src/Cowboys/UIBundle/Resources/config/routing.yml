@@ -1,7 +1,11 @@
 homepage:
     path: /
     defaults:  { _controller: cowboys_ui.homepage_controller:home }
-    
+
 register:
     path: /register
     defaults:  { _controller: cowboys_ui.register_controller:register }
+
+register_success:
+    path: /register/success
+    defaults:  { _controller: cowboys_ui.register_controller:registerSuccess }

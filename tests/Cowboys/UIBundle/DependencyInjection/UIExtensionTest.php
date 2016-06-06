@@ -4,12 +4,14 @@ namespace Tests\Cowboys\UIBundle\DependencyInjection;
 
 use Cowboys\UIBundle\Controller\HomepageController;
 use Cowboys\UIBundle\DependencyInjection\UIExtension;
+use League\Tactician\CommandBus;
 use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 /**
  * Tests for UIExtension
- * 
+ *
  * @author gbprod <contact@gb-prod.fr>
  */
 class UIExtensionTest extends \PHPUnit_Framework_TestCase
@@ -23,13 +25,15 @@ class UIExtensionTest extends \PHPUnit_Framework_TestCase
 
         $this->container = new ContainerBuilder();
         $this->container->registerExtension($this->extension);
-        
+
         $this->container->set('templating', $this->getMock(EngineInterface::class));
-        
+        $this->container->set('tactician.commandbus', $this->getMock(CommandBus::class, [], [[]]));
+        $this->container->set('router', $this->getMock(UrlGeneratorInterface::class));
+
         $this->container->loadFromExtension($this->extension->getAlias());
         $this->container->compile();
     }
-    
+
     /**
      * @dataProvider getServices
      */
@@ -38,16 +42,16 @@ class UIExtensionTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($this->container->has($service));
 
         $this->assertInstanceOf(
-            $classname, 
+            $classname,
             $this->container->get($service)
         );
     }
-    
+
     public function getServices()
     {
         return [
             ['cowboys_ui.homepage_controller', HomepageController::class]
         ];
     }
-    
+
 }
