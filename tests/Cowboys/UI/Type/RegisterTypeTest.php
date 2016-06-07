@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\Cowboys\UIBundle\Form\Type;
+namespace Tests\Cowboys\UI\Form\Type;
 
 use Cowboys\Application\Command\RegisterCommand;
-use Cowboys\UIBundle\Form\RegisterType;
+use Cowboys\UI\Form\RegisterType;
 use Symfony\Component\Form\Test\TypeTestCase;
 
 /**
@@ -27,7 +27,7 @@ class RegisterTypeTest extends TypeTestCase
         $command->name = 'Gillou';
         $command->email = 'contact@gb-prod.fr';
         $command->password = 'secret';
-        
+
         $form->submit($formData);
 
         $this->assertTrue($form->isSynchronized());

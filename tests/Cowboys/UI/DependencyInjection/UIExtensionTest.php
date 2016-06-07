@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\Cowboys\UIBundle\DependencyInjection;
+namespace Tests\Cowboys\UI\DependencyInjection;
 
-use Cowboys\UIBundle\Controller\HomepageController;
-use Cowboys\UIBundle\DependencyInjection\UIExtension;
+use Cowboys\UI\Controller\HomepageController;
+use Cowboys\UI\DependencyInjection\UIExtension;
 use League\Tactician\CommandBus;
 use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

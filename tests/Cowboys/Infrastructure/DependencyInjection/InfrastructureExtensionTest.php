@@ -1,29 +1,28 @@
 <?php
 
-namespace Tests\Cowboys\Application\DependencyInjection;
+namespace Tests\Cowboys\Infrastructure\DependencyInjection;
 
-use Cowboys\Application\Controller\HomepageController;
-use Cowboys\Application\DependencyInjection\AppExtension;
 use Cowboys\Application\Handler\RegisterHandler;
+use Cowboys\Infrastructure\DependencyInjection\InfrastructureExtension;
 use Cowboys\Infrastructure\Entity\DoctrineUserProvider;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-use Doctrine\ORM\EntityManagerInterface;
 
 /**
- * Tests for AppExtension
+ * Tests for InfrastructureExtension
  *
  * @author gbprod <contact@gb-prod.fr>
  */
-class AppExtensionTest extends \PHPUnit_Framework_TestCase
+class InfrastructureExtensionTest extends \PHPUnit_Framework_TestCase
 {
     private $extension;
     private $container;
 
     protected function setUp()
     {
-        $this->extension = new AppExtension();
+        $this->extension = new InfrastructureExtension();
 
         $this->container = new ContainerBuilder();
         $this->container->registerExtension($this->extension);
