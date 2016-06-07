@@ -1,0 +1,11 @@
+Cowboys\Application\Command\RegisterCommand:
+    name:
+        - NotBlank: ~
+    email:
+        - NotBlank: ~
+        - Email:
+            message: Cet email ne semble pas correct
+            checkMX: true
+    password:
+        - NotBlank: ~
+    

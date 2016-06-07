@@ -55,7 +55,7 @@ doctrine:
            CowboyDomain:
               type: yml
               prefix: Cowboys\CoreDomain\Cowboy
-              dir: %kernel.root_dir%/../src/Cowboys/AppBundle/Resources/config/doctrine/domain/cowboy
+              dir: %kernel.root_dir%/../src/Cowboys/Infrastructure/Resources/config/doctrine/domain/cowboy
               is_bundle: false
 
 # Swiftmailer Configuration
