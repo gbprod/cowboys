@@ -94,6 +94,7 @@ test-loop:
 ##########
 
 ## Deploy application
+deploy: export SYMFONY_ENV=prod
 deploy: deploy-deps deploy-assets deploy-warmup
 
 deploy-deps:
