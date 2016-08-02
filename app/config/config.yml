@@ -72,10 +72,3 @@ assetic:
 
 braincrafted_bootstrap:
     css_preprocessor: none
-
-tactician:
-    commandbus:
-        default:
-            middleware:
-                - tactician.middleware.validator
-                - tactician.middleware.command_handler

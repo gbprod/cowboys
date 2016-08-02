@@ -9,7 +9,7 @@ services:
         arguments:
             - '@templating'
             - '@cowboys_ui.form.register'
-            - '@tactician.commandbus'
+            - '@command_bus'
             - '@router'
 
     cowboys_ui.form_type.register:
