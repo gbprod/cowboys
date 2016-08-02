@@ -4,4 +4,4 @@ services:
         arguments:
             - '@cowboys_infrastructure.cowboys_repository'
         tags:
-            - { name: 'tactician.handler',  command: 'Cowboys\Application\Command\RegisterCommand' }
+            - { name: 'command_handler', handles: 'Cowboys\Application\Command\RegisterCommand' }

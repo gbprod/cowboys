@@ -4,7 +4,7 @@ namespace Tests\Cowboys\UI\DependencyInjection;
 
 use Cowboys\UI\Controller\HomepageController;
 use Cowboys\UI\DependencyInjection\UIExtension;
-use League\Tactician\CommandBus;
+use SimpleBus\Message\Bus\MessageBus;
 use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
@@ -27,7 +27,7 @@ class UIExtensionTest extends \PHPUnit_Framework_TestCase
         $this->container->registerExtension($this->extension);
 
         $this->container->set('templating', $this->getMock(EngineInterface::class));
-        $this->container->set('tactician.commandbus', $this->getMock(CommandBus::class, [], [[]]));
+        $this->container->set('command_bus', $this->getMock(MessageBus::class, [], [[]]));
         $this->container->set('router', $this->getMock(UrlGeneratorInterface::class));
 
         $this->container->loadFromExtension($this->extension->getAlias());
