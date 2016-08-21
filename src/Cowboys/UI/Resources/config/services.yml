@@ -3,6 +3,7 @@ services:
         class: Cowboys\UI\Controller\HomepageController
         arguments:
             - '@templating'
+            - '@command_bus'
 
     cowboys_ui.register_controller:
         class: Cowboys\UI\Controller\RegisterController
