@@ -2,8 +2,10 @@
 
 namespace Cowboys\UI\Controller;
 
+use SimpleBus\Message\Bus\MessageBus;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Controller for homepage
@@ -18,22 +20,34 @@ class HomepageController extends Controller
     private $templating;
 
     /**
-     * @param EngineInterface $templating
+     * @var MessageBus
      */
-    public function __construct(EngineInterface $templating)
+    private $bus;
+
+    /**
+     * @param EngineInterface $templating
+     * @param MessageBus      $bus
+     */
+    public function __construct(EngineInterface $templating, MessageBus $bus)
     {
         $this->templating = $templating;
+        $this->bus        = $bus;
     }
 
     /**
      * homepage
      *
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      */
     public function home()
     {
+        // $query = new ShowHomeQuery();
+
+        // $this->bus->handle($query);
+
         return $this->templating->renderResponse(
-            'UIBundle:page:home.html.twig'
+            'UIBundle:page:home.html.twig'//,
+            // (array) $query->getResponse()
         );
     }
 }
