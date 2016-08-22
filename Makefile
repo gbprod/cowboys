@@ -26,14 +26,25 @@ help:
 # Start & stop #
 ################
 
-bootstrap:
-	mysql-ctl install
-	wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.3.2/elasticsearch-2.3.2.tar.gz
-	tar xf elasticsearch-2.3.2.tar.gz 
-	mv elasticsearch-2.3.2 bin/elasticsearch
-	rm elasticsearch-2.3.2.tar.gz
-	
+bootstrap: bootstrap-elasticsearch
+
+bootstrap-elasticsearch:
+	wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.3.5/elasticsearch-2.3.5.tar.gz
+	tar xf elasticsearch-2.3.5.tar.gz
+	mv elasticsearch-2.3.5 bin/elasticsearch
+	rm elasticsearch-2.3.5.tar.gz
+
 start:
+	php bin/console server:start
+	bin/elasticsearch/bin/elasticsearch 
+
+stop:
+	php bin/console server:stop
+
+bootstrap-c9: bootstrap-elasticsearch
+	mysql-ctl install
+
+start-c9:
 	mysql-ctl start
 	bin/elasticsearch/bin/elasticsearch
 
@@ -75,13 +86,13 @@ update-assets: install-assets
 ########
 
 ## Run tests
-test: 
+test:
 	vendor/bin/phpunit
 
 ## Code coverage
 test-coverage:
 	vendor/bin/phpunit --coverage-text
-	
+
 ## Tests loop
 test-loop:
 	while true; \
