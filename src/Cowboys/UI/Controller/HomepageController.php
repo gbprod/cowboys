@@ -41,7 +41,7 @@ class HomepageController extends Controller
      */
     public function home()
     {
-        // $query = new ShowHomeQuery();
+        // $query = new HomeQuery();
 
         // $this->bus->handle($query);
 
